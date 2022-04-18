@@ -1,3 +1,6 @@
+let mass = [];
+for(let i = 0; i < 1000; i++) mass[i] = Math.floor(Math.random() * 100);
+
 function quickSort(arr) {
   if (arr.length < 2) return arr;
   let pivot = arr[0];
@@ -13,3 +16,5 @@ function quickSort(arr) {
   }
   return quickSort(left).concat(pivot, quickSort(right));
 }
+
+quickSort(mass)
